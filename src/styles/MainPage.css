@@ -1,0 +1,109 @@
+.main-page {
+	height: 85vh;
+    display: flex;
+}
+
+.sparkle-pic {
+    height: 100%;
+    width: 100%;
+    opacity: 80%;
+    filter: brightness(75%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    margin-top: 4vw;
+    height: 70vh;
+    width: 45vw;
+    left: 25%;
+}
+
+.title-text {
+    color: white;
+    font-size: 1.8vw;
+    font-weight: 500;
+    
+}
+
+.main-text {
+    color: white;
+    font-size: 1.8vw;
+    font-weight: 500;
+    line-height: 75px;
+}
+
+.main-subtext {
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 75px;
+    margin-top: 3vw;
+}
+
+.main-card {
+    background-color: rgba(255, 255, 255, .35);  
+    width: 65vw;
+    height: auto;
+    font-size: 0.9vw;
+    font-weight: 200;
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 2vw;
+    backdrop-filter: blur(5px);
+    box-shadow:
+		0 1px 1px hsl(0deg 0% 0% / 0.075),
+		0 2px 2px hsl(0deg 0% 0% / 0.075),
+		0 4px 4px hsl(0deg 0% 0% / 0.075),
+		0 8px 8px hsl(0deg 0% 0% / 0.075),
+        0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+
+.main-card-text {
+    margin: 2vw;
+}
+
+.main-learn-btn {
+    display: inline-block;
+    position: relative;
+    border-radius: 3px;
+    background-color: rgb(247, 223, 248);
+    border: none;
+    width: 10vw;
+    height: 3vw;
+    margin-top: 1.5vw;
+    text-align: center;
+    font-size: 0.9vw;
+    font-weight: 500;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow:
+		0 1px 1px hsl(0deg 0% 0% / 0.075),
+		0 2px 2px hsl(0deg 0% 0% / 0.075),
+		0 4px 4px hsl(0deg 0% 0% / 0.075),
+		0 8px 8px hsl(0deg 0% 0% / 0.075),
+        0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+  
+.main-learn-btn:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    right: -5px;
+    transition: 0.5s;
+}
+  
+.main-learn-btn:hover{
+    padding-right: 20px;
+    padding-left: 8px;
+}
+  
+.main-learn-btn:hover:after {
+    opacity: 1;
+    right: 10px;
+}

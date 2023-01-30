@@ -1,0 +1,60 @@
+.about-page {
+    display: flex;
+    height: 85vh;
+}
+
+.about-card {
+    display: flex;
+    position: absolute;
+    top: 10;
+    left: 10;
+}
+
+.kris-pic {
+    margin-top: 6vw;
+    margin-left: 6vw;
+    height: 35vw;
+    border-radius: 6px; 
+    box-shadow:
+		0 1px 1px hsl(0deg 0% 0% / 0.075),
+		0 2px 2px hsl(0deg 0% 0% / 0.075),
+		0 4px 4px hsl(0deg 0% 0% / 0.075),
+		0 8px 8px hsl(0deg 0% 0% / 0.075),
+        0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+
+.about-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6vw;
+    margin-left: 5vw;
+    width: 55vw;
+    height: 35vw;
+    padding: 2vw;
+    overflow-y: scroll;
+    background-color: rgba(255, 255, 255, .35); 
+    border-radius: 6px; 
+    backdrop-filter: blur(5px);
+    box-shadow:
+		0 1px 1px hsl(0deg 0% 0% / 0.075),
+		0 2px 2px hsl(0deg 0% 0% / 0.075),
+		0 4px 4px hsl(0deg 0% 0% / 0.075),
+		0 8px 8px hsl(0deg 0% 0% / 0.075),
+        0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+
+.about-box::-webkit-scrollbar {
+    width: 1vw;
+}
+
+.about-box::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 3px;
+}
+
+.about-text {
+    margin-bottom: 2vw;
+    text-indent: 3vw;
+    font-size: 14px;
+    color: black;
+}
