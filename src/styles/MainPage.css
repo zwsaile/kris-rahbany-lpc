@@ -1,5 +1,5 @@
 .main-page {
-	height: 85vh;
+	height: 90vh;
     display: flex;
 }
 
@@ -27,8 +27,7 @@
 .title-text {
     color: white;
     font-size: 1.8vw;
-    font-weight: 500;
-    
+    font-weight: 500; 
 }
 
 .main-text {
@@ -43,12 +42,12 @@
     font-size: 1.5vw;
     font-weight: 400;
     line-height: 75px;
-    margin-top: 3vw;
+    margin-top: 4vw;
 }
 
 .main-card {
     background-color: rgba(255, 255, 255, .35);  
-    width: 65vw;
+    width: 70vw;
     height: auto;
     font-size: 0.9vw;
     font-weight: 200;
@@ -73,10 +72,11 @@
     position: relative;
     border-radius: 3px;
     background-color: rgb(247, 223, 248);
+    color: black;
     border: none;
     width: 10vw;
     height: 3vw;
-    margin-top: 1.5vw;
+    margin-top: 2vw;
     text-align: center;
     font-size: 0.9vw;
     font-weight: 500;
@@ -106,4 +106,97 @@
 .main-learn-btn:hover:after {
     opacity: 1;
     right: 10px;
+}
+
+@media only screen and (max-width: 420px) {
+    .main-page {
+        height: 90vh;
+    }
+    .main-box {
+        width: 80vw;
+        left: 10%;
+    }
+    .title-text {
+        font-size: 5vw;
+        font-weight: 500;
+        text-align: center;
+        line-height: 50px;
+        margin-top: 4vh;
+    }
+    .main-text {
+        font-size: 5vw;
+        font-weight: 500;
+        line-height: 50px;
+        text-align: center;
+    }
+    .main-subtext {
+        font-size: 4vw;
+        font-weight: 400;
+        line-height: 50px;
+        margin-top: 7vh;
+    }
+    .main-card {
+        width: 90vw;
+        font-size: 1.4vh;
+        font-weight: 200;
+        margin-top: 3vh;
+    }
+    
+    .main-card-text {
+        margin: 3vh;
+    }
+    
+    .main-learn-btn {
+        width: 25vw;
+        height: 5vh;
+        margin-top: 10vw;
+        text-align: center;
+        font-size: 2.2vw;
+    }
+}
+@media only screen and (min-width: 420px) and (max-width: 1000px) {
+    .main-page {
+        height: 90vh;
+    }
+    .main-box {
+        width: 80vw;
+        left: 10%;
+    }
+    .title-text {
+        font-size: 4.5vw;
+        font-weight: 500;
+        text-align: center;
+        line-height: 50px;
+        margin-top: 4vh;
+    }
+    .main-text {
+        font-size: 4.5vw;
+        font-weight: 500;
+        line-height: 50px;
+        text-align: center;
+    }
+    .main-subtext {
+        font-size: 3.75vw;
+        font-weight: 400;
+        line-height: 50px;
+        margin-top: 8vh;
+    }
+    .main-card {
+        width: 90vw;
+        font-size: 1.5vh;
+        font-weight: 200;
+        margin-top: 4vh;
+    }
+    
+    .main-card-text {
+        margin: 3vh;
+    }
+    
+    .main-learn-btn {
+        width: 25vw;
+        height: 5vh;
+        margin-top: 10vw;
+        text-align: center;
+        font-size: 2.2vw;
+    }
 }

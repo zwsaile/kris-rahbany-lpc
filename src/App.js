@@ -1,4 +1,5 @@
 import './styles/App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/Nav'
 import MainPage from './components/MainPage'
 import Contact from './components/Contact'

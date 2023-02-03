@@ -1,6 +1,6 @@
 .about-page {
     display: flex;
-    height: 85vh;
+    height: 90vh;
 }
 
 .about-card {
@@ -23,13 +23,13 @@
         0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
-.about-box {
+.about-tabs {
     display: flex;
     flex-direction: column;
     margin-top: 6vw;
     margin-left: 5vw;
     width: 55vw;
-    height: 35vw;
+    height: 70vh;
     padding: 2vw;
     overflow-y: scroll;
     background-color: rgba(255, 255, 255, .35); 
@@ -43,18 +43,113 @@
         0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
-.about-box::-webkit-scrollbar {
+.about-card::-webkit-scrollbar {
     width: 1vw;
 }
 
-.about-box::-webkit-scrollbar-thumb {
+.about-card::-webkit-scrollbar-thumb {
     background-color: white;
     border-radius: 3px;
 }
 
 .about-text {
-    margin-bottom: 2vw;
+    padding: 0.5vw 4vw;
     text-indent: 3vw;
-    font-size: 14px;
+    font-size: 1vw;
+    line-height: 2.5vw;
     color: black;
+}
+
+.nav {
+    position: sticky;
+    top: 0px;
+}
+
+.about-tabs {
+    padding: 0px;
+}
+
+.about-tab-section {
+    background-color: rgb(218, 210, 218);
+    margin-bottom: 3vw;
+}
+
+.nav-link {
+    color: black !important;
+}
+@media only screen and (max-width: 430px) {
+    .about-page {
+        height: 90vh;
+    }
+    .about-card {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .kris-pic {
+        margin-top: 6vw;
+        height: 40vh;
+        width: 33vh;
+        margin-right: 2vw;
+    }
+    
+    .about-tabs {
+        margin-top: 6vw;
+        height: 40vh;
+        width: 80vw;
+    }
+    
+    .about-text {
+        text-indent: 4vw;
+        font-size: 2.6vw;
+        line-height: 5vw;
+    }
+    
+    .about-tab-section {
+        margin-bottom: 5vw;
+    }
+    
+    .nav-link {
+        font-size: 3vw;
+    }
+}
+@media only screen and (min-width: 430px) and (max-width: 1000px) {
+    .about-page {
+        height: 90vh;
+    }
+    .about-card {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .kris-pic {
+        margin-top: 6vh;
+        height: 32vw;
+        width: 26vw;
+        margin-right: 2vw;
+    }
+    
+    .about-tabs {
+        margin-top: 6vh;
+        height: 40vh;
+        width: 80vw;
+    }
+    
+    .about-text {
+        text-indent: 4vw;
+        font-size: 1.5vw;
+        line-height: 4vw;
+    }
+    
+    .about-tab-section {
+        margin-bottom: 3vw;
+    }
+    
+    .nav-link {
+        font-size: 1.8vw;
+    }
 }

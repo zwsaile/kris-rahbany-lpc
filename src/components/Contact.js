@@ -1,25 +1,54 @@
 import '../styles/Contact.css';
-
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser';
+	
 const Contact = () => {
-		return (
-			<div className='about-page'>
-                <img className='sparkle-pic' src='../assets/sparkle.jpg' alt='An out of focus photo of pink lights in the sky'/>
-                <div className='about-card'>
-                    <img className='kris-pic' src='../assets/kris.JPEG' alt='A headshot of Kristen Rahbany sitting in a leather chair'/>
-                    <div className='about-box'>
-                        <p className='about-text'>
-                            I work with clients using a systems approach, which means I believe symptoms arise for a client because of individual choices, interpersonal relationships, family of origin patterns, and larger societal and cultural issues. Relationship with ourselves and others is where we can find our deepest hurt but it can also be where we discover profound healing and joy. Let’s use relationship, whether in individual or couples work, to highlight patterns that are no longer working and find new ways of being that will promote healing, inner strength, and joy. We will collaborate in order to achieve your goals and create new choices and patterns. Part of the process is fostering greater connections within the self and in relationships.
-                        </p>
-                        <p className='about-text'>
-                            In therapy, I use a trauma-informed systems approach, using experiential, person-centered and integrative techniques individualized for client’s needs. My approach to therapy allows clients to understand how past experiences and relationships impact one’s life and how to make movements towards change. Therapeutic techniques may include an experiential approach, psychodrama, role playing, and inner child work. Revisiting issues from the past can cause discomfort; this is normal within the therapeutic process. As your therapist, I will support you through navigating this discomfort.
-                        </p>
-                        <p className='about-text'>
-                            I believe that everyone deserves healing and has the ability to grow from life struggles. It is an honor to be a part of clients’ journeys and to witness them create a life they truly want for themselves. My style is warm and direct; it is important to me that my clients feel seen and understood during our work together.
-                        </p>
-                    </div>
+	const form = useRef();
+	const name = useRef();
+	const phone = useRef();
+	const email = useRef();
+	const msg = useRef();
+
+	const sendEmail = (e) => {
+		e.preventDefault();
+		if (name.current.value && phone.current.value && email.current.value && msg.current.value ) {
+			emailjs.sendForm('service_wov1xdi', 'template_chd6a08', form.current, 'e6hSApDtFD4z9vEk8')
+				.then(() => {
+					console.log('Email sent successfully');
+				}, (error) => {
+					console.log(error, 'Unable to send email');
+				});
+		} else {
+			msg.current.placeholder = 'Please fill out all fields before submitting'
+		}
+	};
+
+	return (
+		<div className='contact-page'>
+            <img className='sparkle-pic' src='../assets/sparkle.jpg' alt='An out of focus photo of pink lights in a purple sky'/>
+                <div className='contact-box'>
+					<form className='contact-form' ref={form} onSubmit={sendEmail}>
+						<div className='form-box'>
+							<div className='form-labels'>
+								<label className='info-label' for='user_name'>Name</label>
+								<label className='info-label' for='user_phone'>Phone Number</label>
+								<label className='info-label' for='user_email'>Email</label>
+								<label className='info-label message-label' for='message'>What can I help you with?</label>
+								
+							</div>
+							<div className='form-inputs'>
+								<input className='user-input' ref={name} type="text" id='user_name' name="user_name" />
+								<input className='user-input' ref={phone} type="tel" id='user-phone' name="user_phone" />
+								<input className='user-input' ref={email} type="email" id='user_email' name="user_email" />
+								<textarea className='user-input' ref={msg} id='message' name="message" />
+								<input className='submit-btn' type="submit" value="Send" />
+							</div>
+						</div>
+					</form>
+                    
                 </div>
 			</div>
-		)
-}
+	);
+};
 
 export default Contact;
